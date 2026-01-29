@@ -3,19 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Juan José Gutiérrez Valle</title>
+<title>CV | Juan José Gutiérrez Valle</title>
 
 <style>
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0b0b0b;
+    color: #e5e5e5;
 }
 
 /* ===== PANTALLA INICIAL ===== */
 .inicio {
     height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
-    color: white;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,129 +30,167 @@ body {
 
 .inicio-box {
     text-align: center;
-    background: rgba(0,0,0,0.35);
-    padding: 45px;
-    border-radius: 12px;
-    animation: aparecer 1.2s ease forwards;
+    padding: 50px;
+    border-radius: 14px;
+    background: rgba(0,0,0,0.7);
+    border: 1px solid rgba(212,175,55,0.3);
+    animation: fadeIn 1.5s ease forwards;
 }
 
 .inicio-box h1 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: #d4af37;
+    letter-spacing: 1px;
 }
 
-/* BOTÓN ANIMADO */
-.inicio-box button {
-    margin-top: 25px;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    border: none;
-    padding: 14px 32px;
+.inicio-box p {
+    color: #bfae70;
+    margin-bottom: 25px;
+}
+
+/* ===== BOTÓN DORADO ANIMADO ===== */
+.btn-gold {
+    position: relative;
+    padding: 15px 36px;
     font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    color: white;
     font-weight: bold;
-    box-shadow: 0 10px 25px rgba(34,197,94,0.4);
-    animation: aparecer 1.5s ease forwards;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000;
+    background: linear-gradient(135deg, #d4af37, #f5e6a8);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(212,175,55,0.6);
 }
 
-.inicio-box button:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 18px 40px rgba(34,197,94,0.6);
+.btn-gold::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,215,100,0.8),
+        transparent
+    );
+    animation: goldTrail 2s infinite;
+}
+
+.btn-gold:hover {
+    box-shadow: 0 0 35px rgba(212,175,55,0.9);
+    transform: scale(1.05);
 }
 
 /* ===== CV ===== */
 .cv {
     display: none;
-    background: #f4f6f8;
-    padding: 30px;
-    animation: slideUp 0.8s ease forwards;
+    padding: 40px 20px;
+    animation: slideUp 0.9s ease forwards;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
+    background: #111;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(212,175,55,0.25);
 }
 
+/* ===== PERFIL ===== */
 .profile-img {
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #d4af37;
     margin-bottom: 20px;
 }
 
+/* ===== TITULOS ===== */
 h1 {
-    color: #1e3a8a;
+    color: #d4af37;
 }
 
 h2 {
-    color: #1e3a8a;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+    margin-top: 35px;
+    color: #d4af37;
+    border-bottom: 1px solid rgba(212,175,55,0.4);
+    padding-bottom: 6px;
 }
 
+/* ===== INFO ===== */
 .info p {
     margin: 6px 0;
 }
 
+/* ===== LISTAS ===== */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ===== SKILLS ===== */
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 .skill {
-    background: #e0e7ff;
-    padding: 8px 12px;
-    border-radius: 5px;
+    background: rgba(212,175,55,0.1);
+    border: 1px solid rgba(212,175,55,0.4);
+    padding: 8px 14px;
+    border-radius: 20px;
     font-size: 14px;
 }
 
-.btn {
+/* ===== BOTONES PDF ===== */
+.btn-doc {
     display: inline-block;
-    background: #1e3a8a;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 6px;
+    margin-top: 12px;
+    padding: 12px 22px;
+    background: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+.btn-doc:hover {
+    background: #d4af37;
+    color: #000;
 }
 
+/* ===== FOOTER ===== */
 footer {
+    margin-top: 40px;
     text-align: center;
-    margin-top: 30px;
-    color: #777;
+    font-size: 14px;
+    color: #999;
 }
 
 /* ===== ANIMACIONES ===== */
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: scale(0.85);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes goldTrail {
+    from { left: -120%; }
+    to { left: 120%; }
 }
 </style>
 </head>
@@ -156,8 +201,8 @@ footer {
 <div class="inicio" id="inicio">
     <div class="inicio-box">
         <h1>Juan José Gutiérrez Valle</h1>
-        <p>Currículum Vitae</p>
-        <button onclick="verCV()">Acceder al CV</button>
+        <p>Currículum Vitae | Perfil Tecnológico</p>
+        <button class="btn-gold" onclick="verCV()">Acceder al CV</button>
     </div>
 </div>
 
@@ -177,43 +222,52 @@ footer {
 
         <h2>Perfil Profesional</h2>
         <p>
-            Bachiller con prácticas profesionales en el sector bancario,
-            conocimientos en SQL Server y bases de datos, orientado al
-            área de tecnología y programación. Persona responsable,
-            sociable y con rápido aprendizaje.
+            Bachiller en <strong>Computación</strong> con formación técnica orientada al área
+            de tecnología y programación. Experiencia práctica en entornos bancarios,
+            bases de datos y herramientas de desarrollo. Persona responsable,
+            organizada, con facilidad para el aprendizaje y motivación por crecer
+            profesionalmente en el sector tecnológico.
         </p>
 
         <h2>Prácticas Profesionales</h2>
-        <p><strong>Practicante – Área de Base de Datos</strong><br>
+        <p><strong>Practicante – Área de Tecnología / Base de Datos</strong><br>
         Banco Industrial – Oficina Central, Guatemala</p>
         <ul>
             <li>Apoyo en el área de bases de datos.</li>
-            <li>Uso de SQL Server para consultas.</li>
-            <li>Colaboración con el equipo técnico.</li>
+            <li>Uso de SQL Server para consultas y validación de información.</li>
+            <li>Soporte a procesos tecnológicos internos.</li>
+            <li>Trabajo colaborativo con personal técnico.</li>
         </ul>
 
         <h2>Educación</h2>
-        <p><strong>Bachiller en Comunicación</strong><br>Guatemala</p>
+        <p><strong>Bachiller en Computación</strong><br>Guatemala</p>
 
         <h2>Conocimientos Técnicos</h2>
         <div class="skills">
             <div class="skill">SQL Server</div>
-            <div class="skill">Consultas SQL</div>
             <div class="skill">Bases de Datos</div>
+            <div class="skill">Consultas SQL</div>
+            <div class="skill">C++ (Nivel Básico)</div>
+            <div class="skill">Git & GitHub (Básico)</div>
             <div class="skill">Programación Básica</div>
         </div>
 
+        <h2>Idiomas</h2>
+        <div class="skills">
+            <div class="skill">Español (Nativo)</div>
+            <div class="skill">Inglés (Básico)</div>
+        </div>
+
         <h2>Documentación</h2>
-        <a href="docs/antecedentes_penales.pdf" class="btn" target="_blank">
-            📄 Descargar Antecedentes Penales
-        </a>
-        <br><br>
-        <a href="docs/titulo_bachiller.pdf" class="btn" target="_blank">
-            🎓 Descargar Título de Bachiller
+        <a href="docs/antecedentes_penales.pdf" class="btn-doc" target="_blank">
+            📄 Antecedentes Penales
+        </a><br>
+        <a href="docs/titulo_bachiller.pdf" class="btn-doc" target="_blank">
+            🎓 Título de Bachiller
         </a>
 
         <footer>
-            © 2026 – Juan José Gutiérrez Valle
+            © 2026 — Juan José Gutiérrez Valle
         </footer>
 
     </div>
@@ -228,3 +282,4 @@ function verCV() {
 
 </body>
 </html>
+
