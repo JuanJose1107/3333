@@ -6,12 +6,8 @@
 <title>CV | Juan José Gutiérrez Valle</title>
 
 <style>
-/* ===== RESET ===== */
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-/* ===== BODY ===== */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -19,7 +15,7 @@ body {
     color: #e5e5e5;
 }
 
-/* ===== PANTALLA INICIAL ===== */
+/* ===== INICIO ===== */
 .inicio {
     height: 100vh;
     background: radial-gradient(circle at top, #1a1a1a, #000);
@@ -32,13 +28,12 @@ body {
     text-align: center;
     padding: 50px;
     border-radius: 14px;
-    background: rgba(0,0,0,0.7);
-    border: 1px solid rgba(212,175,55,0.3);
+    background: rgba(0,0,0,0.75);
+    border: 1px solid rgba(212,175,55,0.35);
     animation: fadeIn 1.5s ease forwards;
 }
 
 .inicio-box h1 {
-    margin-bottom: 8px;
     color: #d4af37;
     letter-spacing: 1px;
 }
@@ -48,10 +43,10 @@ body {
     margin-bottom: 25px;
 }
 
-/* ===== BOTÓN DORADO ANIMADO ===== */
+/* ===== BOTÓN DORADO ===== */
 .btn-gold {
     position: relative;
-    padding: 15px 36px;
+    padding: 15px 38px;
     font-size: 16px;
     font-weight: bold;
     color: #000;
@@ -60,7 +55,7 @@ body {
     border-radius: 40px;
     cursor: pointer;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(212,175,55,0.6);
+    box-shadow: 0 0 25px rgba(212,175,55,0.7);
 }
 
 .btn-gold::before {
@@ -73,15 +68,15 @@ body {
     background: linear-gradient(
         120deg,
         transparent,
-        rgba(255,215,100,0.8),
+        rgba(255,215,100,0.9),
         transparent
     );
     animation: goldTrail 2s infinite;
 }
 
 .btn-gold:hover {
-    box-shadow: 0 0 35px rgba(212,175,55,0.9);
-    transform: scale(1.05);
+    transform: scale(1.06);
+    box-shadow: 0 0 45px rgba(212,175,55,1);
 }
 
 /* ===== CV ===== */
@@ -92,15 +87,14 @@ body {
 }
 
 .container {
-    max-width: 950px;
+    max-width: 960px;
     margin: auto;
     background: #111;
     padding: 40px;
-    border-radius: 12px;
-    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 14px;
+    border: 1px solid rgba(212,175,55,0.3);
 }
 
-/* ===== PERFIL ===== */
 .profile-img {
     width: 170px;
     height: 170px;
@@ -110,33 +104,23 @@ body {
     margin-bottom: 20px;
 }
 
-/* ===== TITULOS ===== */
-h1 {
+h1, h2 {
     color: #d4af37;
 }
 
 h2 {
     margin-top: 35px;
-    color: #d4af37;
     border-bottom: 1px solid rgba(212,175,55,0.4);
     padding-bottom: 6px;
 }
 
-/* ===== INFO ===== */
 .info p {
     margin: 6px 0;
 }
 
-/* ===== LISTAS ===== */
-ul {
-    padding-left: 20px;
-}
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
 
-li {
-    margin-bottom: 6px;
-}
-
-/* ===== SKILLS ===== */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -144,18 +128,18 @@ li {
 }
 
 .skill {
-    background: rgba(212,175,55,0.1);
+    background: rgba(212,175,55,0.12);
     border: 1px solid rgba(212,175,55,0.4);
-    padding: 8px 14px;
+    padding: 8px 15px;
     border-radius: 20px;
     font-size: 14px;
 }
 
-/* ===== BOTONES PDF ===== */
+/* ===== BOTONES DOCUMENTOS ===== */
 .btn-doc {
     display: inline-block;
     margin-top: 12px;
-    padding: 12px 22px;
+    padding: 12px 26px;
     background: transparent;
     border: 1px solid #d4af37;
     color: #d4af37;
@@ -169,7 +153,6 @@ li {
     color: #000;
 }
 
-/* ===== FOOTER ===== */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -220,14 +203,31 @@ footer {
             <p><strong>Email:</strong> juangutierrez110707@gmail.com</p>
         </div>
 
+        <h2>Objetivo Profesional</h2>
+        <p>
+            Desarrollarme profesionalmente en el área de tecnología y sistemas,
+            aplicando mis conocimientos en programación, bases de datos y herramientas
+            de desarrollo, con el objetivo de crecer como profesional dentro de una
+            empresa tecnológica o institución financiera.
+        </p>
+
         <h2>Perfil Profesional</h2>
         <p>
-            Bachiller en <strong>Computación</strong> con formación técnica orientada al área
-            de tecnología y programación. Experiencia práctica en entornos bancarios,
-            bases de datos y herramientas de desarrollo. Persona responsable,
-            organizada, con facilidad para el aprendizaje y motivación por crecer
-            profesionalmente en el sector tecnológico.
+            Bachiller en <strong>Computación</strong> y estudiante del
+            <strong>primer semestre de Ingeniería en Sistemas</strong> en la
+            Universidad Mariano Gálvez (UMG). Con experiencia práctica en entornos
+            bancarios, conocimientos básicos en programación, bases de datos y control
+            de versiones. Persona responsable, organizada y con alto interés en el
+            aprendizaje continuo.
         </p>
+
+        <h2>Formación Académica</h2>
+        <ul>
+            <li><strong>Ingeniería en Sistemas</strong> – Universidad Mariano Gálvez (UMG)  
+                <br>Primer semestre (en curso)
+            </li>
+            <li><strong>Bachiller en Computación</strong> – Guatemala</li>
+        </ul>
 
         <h2>Prácticas Profesionales</h2>
         <p><strong>Practicante – Área de Tecnología / Base de Datos</strong><br>
@@ -239,15 +239,12 @@ footer {
             <li>Trabajo colaborativo con personal técnico.</li>
         </ul>
 
-        <h2>Educación</h2>
-        <p><strong>Bachiller en Computación</strong><br>Guatemala</p>
-
         <h2>Conocimientos Técnicos</h2>
         <div class="skills">
             <div class="skill">SQL Server</div>
             <div class="skill">Bases de Datos</div>
             <div class="skill">Consultas SQL</div>
-            <div class="skill">C++ (Nivel Básico)</div>
+            <div class="skill">C++ (Básico)</div>
             <div class="skill">Git & GitHub (Básico)</div>
             <div class="skill">Programación Básica</div>
         </div>
@@ -259,6 +256,9 @@ footer {
         </div>
 
         <h2>Documentación</h2>
+        <a href="docs/cv_juan_gutierrez.pdf" class="btn-doc" target="_blank">
+            📄 Descargar CV en PDF
+        </a><br>
         <a href="docs/antecedentes_penales.pdf" class="btn-doc" target="_blank">
             📄 Antecedentes Penales
         </a><br>
@@ -282,4 +282,3 @@ function verCV() {
 
 </body>
 </html>
-
